@@ -10,4 +10,8 @@ public class Pamet {
     public void setKapacitaPameti(Long kapacitaPameti) {
         this.kapacitaPameti = kapacitaPameti;
     }
+    @Override
+    public String toString() {
+        return "Kapacita operacni pameti je: " + kapacitaPameti + " bajtu.";
+    }
 }

@@ -19,4 +19,8 @@ public class Procesor {
     public void setRychlost(Long rychlost) {
         this.rychlost = rychlost;
     }
+    @Override
+    public String toString() {
+        return "Procesor je: " + vyrobce + " " + rychlost + " Hz.";
+    }
 }

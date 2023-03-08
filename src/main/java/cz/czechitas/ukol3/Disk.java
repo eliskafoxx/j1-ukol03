@@ -20,4 +20,8 @@ public class Disk {
     public void setVyuziteMisto(Long vyuziteMisto) {
         this.vyuziteMisto = vyuziteMisto;
     }
+    @Override
+    public String toString() {
+        return "HD: "+ kapacita + " bajtu, vyuzite: "+ vyuziteMisto + " bajtu.";
+    }
 }

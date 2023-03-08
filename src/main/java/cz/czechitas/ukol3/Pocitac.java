@@ -48,7 +48,12 @@ public class Pocitac {
             System.out.println("PC se zapnulo.");
         }
     }
-}
-//    public void vypniSe();
-
-
+    public void vypniSe() {
+        if (jeZapnuty) {
+            jeZapnuty = false;
+            System.out.println("off");
+        } else {
+            System.out.println("nic se nedeje");
+        }
+    }
+    }

@@ -51,9 +51,9 @@ public class Pocitac {
     public void vypniSe() {
         if (jeZapnuty) {
             jeZapnuty = false;
-            System.out.println("off");
+            System.out.println("(off)");
         } else {
-            System.out.println("nic se nedeje");
+            System.out.println("(nic se nedeje)");
         }
     }
     }

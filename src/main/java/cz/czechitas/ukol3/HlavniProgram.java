@@ -14,24 +14,48 @@ public class HlavniProgram {
         eliskyProcesor.setRychlost(3_200_000_000_000L);
         eliskyProcesor.setVyrobce("Apple");
 
-
         Pamet eliskyPamet = new Pamet();
         eliskyPamet.setKapacitaPameti(8_000_000_000L);
-
 
         Disk eliskyDisk = new Disk();
         eliskyDisk.setKapacita(245_107_195_904L);
 
+        /* vypise chybu "PC nelze zapnout bez procesoru
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.zapniSe();
+        */
 
         eliskyPocitac.setCpu(eliskyProcesor);
 
-        eliskyPocitac.setRam(eliskyPamet);
-
-        eliskyPocitac.setPevnyDisk(eliskyDisk);
-
-
+        /* vypise chybu "PC nelze zapnout bez operacni pameti!"
         System.out.println(eliskyPocitac.toString());
         eliskyPocitac.zapniSe();
+        */
+
+        eliskyPocitac.setRam(eliskyPamet);
+
+        /* vypise chybu "PC nelze zapnout bez HD!"
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.zapniSe();
+        */
+        eliskyPocitac.setPevnyDisk(eliskyDisk);
+
+        // dojde k zapnuti PC
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.zapniSe();
+
+        /* vypise chybu "PC je jiz zapnuto!"
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.zapniSe();
+         */
+
+        // vypnuti PC -> off
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.vypniSe();
+
+        // nevypise chybu -> nic se nedeje
+        System.out.println(eliskyPocitac.toString());
+        eliskyPocitac.vypniSe();
 
 
     }

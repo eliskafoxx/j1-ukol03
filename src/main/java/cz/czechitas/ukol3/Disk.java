@@ -4,7 +4,6 @@ public class Disk {
     private Long kapacita;
     private Long vyuziteMisto;
 
-
     public Long getKapacita() {
         return kapacita;
     }

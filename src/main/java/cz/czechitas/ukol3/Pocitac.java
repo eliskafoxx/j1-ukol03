@@ -48,6 +48,7 @@ public class Pocitac {
             System.out.println("PC se zapnulo.");
         }
     }
+
     public void vypniSe() {
         if (jeZapnuty) {
             jeZapnuty = false;
@@ -56,4 +57,30 @@ public class Pocitac {
             System.out.println("(nic se nedeje)");
         }
     }
-    }
+        public void vytvorSouborOVelikosti (long velikost) {
+            if (!jeZapnuty) {
+                System.err.println("(nic se nedeje)"); //PC neni zapnuto, neni mozno provadet zapis ani mazani souboru
+            } else {
+                if  (pevnyDisk.getVyuziteMisto() + velikost < pevnyDisk.getKapacita()) {
+                    pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() + velikost);
+                    System.out.println("Vytvoren soubor o velikosti: " + velikost + " bajtu.");
+                    System.out.println(pevnyDisk.toString());
+                } else {
+                    System.err.println("Nelze vytvorit pozadovany soubor, HD nema dostatecnou kapacitu!");
+                    System.out.println(pevnyDisk.toString());
+                }
+            }
+        }
+        public void vymazSouborOVelikosti(long velikost) {
+                if (!jeZapnuty) {
+                    System.err.println("(nic se nedeje)"); //PC neni zapnuto, neni mozno provadet zapis ani mazani souboru
+                } else {
+                    if (pevnyDisk.getVyuziteMisto() < velikost) {
+                        velikost = pevnyDisk.getVyuziteMisto();
+                    }
+                    pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+                    System.out.println("Vymazan soubor o velikosti: " + velikost + " bajtu.");
+                    System.out.println(pevnyDisk.toString());
+                }
+            }
+        }

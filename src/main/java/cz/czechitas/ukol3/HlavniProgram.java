@@ -19,6 +19,7 @@ public class HlavniProgram {
 
         Disk eliskyDisk = new Disk();
         eliskyDisk.setKapacita(245_107_195_904L);
+        eliskyDisk.setVyuziteMisto(232_109_182_098L);
 
         /* vypise chybu "PC nelze zapnout bez procesoru
         System.out.println(eliskyPocitac.toString());
@@ -57,7 +58,12 @@ public class HlavniProgram {
         System.out.println(eliskyPocitac.toString());
         eliskyPocitac.vypniSe();
 
-
+        // CAST 2
+        // vytvareni a mazani souboru:
+        eliskyPocitac.zapniSe();
+        eliskyPocitac.vytvorSouborOVelikosti(300_000_001);
+        eliskyPocitac.vymazSouborOVelikosti(300_000_001);
+        eliskyPocitac.vypniSe();
     }
 
 }

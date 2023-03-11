@@ -7,16 +7,13 @@ public class Disk {
     public Long getKapacita() {
         return kapacita;
     }
-
-    public void setKapacita(Long kapacita) {
+    public void setKapacita(long kapacita) {
         this.kapacita = kapacita;
     }
-
-    public Long getVyuziteMisto() {
+    public long getVyuziteMisto() {
         return vyuziteMisto;
     }
-
-    public void setVyuziteMisto(Long vyuziteMisto) {
+    public void setVyuziteMisto(long vyuziteMisto) {
         this.vyuziteMisto = vyuziteMisto;
     }
     @Override
